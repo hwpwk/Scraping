@@ -12,5 +12,5 @@ head(Premier_result)
 # 取得データをcsvとして出力
 write.csv(Premier_result, 'Premier_result.csv')
 
-# index番号を抜く
-write.csv(Premier_result, 'Premier_result.csv',row.names=FALSE)
+# index番号を除外した状態でcsvとして出力
+write.csv(Premier_result, 'Premier_result.csv', row.names=FALSE)
