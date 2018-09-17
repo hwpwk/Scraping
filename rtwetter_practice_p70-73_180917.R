@@ -28,17 +28,17 @@ rt <- search_tweets(
 # これでrtに「データサイエンティスト」検索結果のデータが格納される
 
 ######################180917追加作業######################################
-## エラー対処
+#### エラー対処
 # csvに出力
 # write.csv(rt, 'DS_word_180917.csv',row.names=FALSE)
 # データフレーム内カラムの一部がリスト型であるためunimplemented type 'list' in 'EncodeElement'というエラーが発生
-
 class(rt)
 # rtはデータフレーム型
 class(rt$hashtags)
 # list型
 dim(rt)
 # 88カラムあるのでその中から必要なカラムのみを抽出
+#### ここまでエラー確認
 
 # list型ではないカラムまでを抽出してみる
 get_rt <- rt[,1:14]
